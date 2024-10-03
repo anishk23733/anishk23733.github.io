@@ -144,7 +144,7 @@
     <p>
         We apply the <a href="https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens">logit lens</a> to probe the language model as it processes the image representations in two VLMs, <a href="https://arxiv.org/abs/2305.06500">InstructBLIP</a> and <a href="https://llava-vl.github.io/">LLaVA</a>.
         This enables us to interpret the image features’ output distributions as they are transformed by the layers of the language model and localize objects spatially within the image. 
-        For an input embedding $t_m$ at layer $l$, given its hidden representation $h_l(t_m)$ and the language model's unembedding matrix $W_U$, we obtain the logits output by the language model as follows:
+        For an input embedding $t_m$, given its hidden representation $h_l(t_m)$ and the language model's unembedding matrix $W_U$, we obtain the logits output by the language model at layer $l$ as follows:
     </p>
     <center>
     <blockquote>$$f_l(t_{m}) = W_U \cdot h_l(t_m) = [\text{logit}_1, \text{logit}_2, \text{logit}_3, \ldots, \text{logit}_{|V|}]$$</blockquote>
